@@ -69,6 +69,11 @@ Move the sources into the created directory;
 
     /usr/local/src/ide/idea-IU-141.1532.4/bin/idea.sh
     
+    Tools/
+        Create Command-Line Launcher... (sudo)
+        Create Desktop entry... (sudo)
+    
+    
     
 # Python 2.7 using
 
