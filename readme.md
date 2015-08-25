@@ -85,9 +85,27 @@ Under the Intellij Idea, install the plugin:
     File/Settings/Plugins/
         Install Jetbrains plugins... or Install plugin from Disk...
     Restart
+    
+Create a directory for Intellij Idea:
+
+
+    mkdir -p ~/IdeaProjects
 
 ## New project
 
     File/New/Project...
     Select Python
-        Next
+        Next, Next
+        Project name and Project location
+    
+    Terminal:
+        virtualenv env
+    
+    File/Project Structure...
+        Project SDK:
+        New
+        Python SDK
+            Add local
+            ~/IdeaProjects/my_project/env/bin/python2.7
+            Select it
+            
