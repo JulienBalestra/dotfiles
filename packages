@@ -1,8 +1,9 @@
-git 
+# IDE
+apt-get install openjdk-8-jdk
 
-openjdk-8-jdk
+# Python
+apt-get install python-dev python-pip python-virtualenv 
+pip install --upgrade pip
 
-python-dev python-pip python-virtualenv 
-pip --upgrade pip
-
-curl jq vim tar strace nmap
+# Sysadmin
+apt-get install curl jq vim tar strace nmap git
