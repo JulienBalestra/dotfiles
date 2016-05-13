@@ -3,5 +3,6 @@ git
 openjdk-8-jdk
 
 python-dev python-pip python-virtualenv 
+pip --upgrade pip
 
 curl jq vim tar strace nmap
