@@ -1,1 +1,7 @@
-git python-dev python-pip python-virtualenv curl jq vim tar openjdk-8-jdk
+git 
+
+openjdk-8-jdk
+
+python-dev python-pip python-virtualenv 
+
+curl jq vim tar strace nmap
