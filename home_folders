@@ -1,3 +1,0 @@
-mkdir -p IdeaProjects
-ln -s JetBrainsProjects jetbrainsprojects
-ln -s Downloads downloads

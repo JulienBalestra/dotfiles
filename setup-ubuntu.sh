@@ -5,11 +5,21 @@ set -o pipefail
 
 test ${SUDO_USER}
 
+## Chrome
+apt-cache show google-chrome-stable || {
+	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
+}
+grep -c "http://dl.google.com/linux/chrome/deb/" /etc/apt/sources.list.d/google.list || {
+	echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+}
+## Chrome
+
 ## APT
 apt-get update
 apt-get upgrade -y
 
-apt-get install -y vim git python3 strace curl python3-virtualenv make nmap jq python3-dev
+apt-get install -y vim git python3 strace curl python3-virtualenv make nmap jq python3-dev \
+	google-chrome-stable
 ## apt
 
 ## Go
@@ -59,3 +69,10 @@ grep -c "alias gojb='cd /home/${SUDO_USER}/go/src/github.com/JulienBalestra'" /h
 
 chown ${SUDO_USER}: /home/${SUDO_USER}/.bash_aliases
 ## Alias
+
+## Git
+git config --global user.email "julien.balestra@gmail.com"
+git config --global user.name "JulienBalestra"
+ls -l /home/${SUDO_USER}/ght
+## Git
+

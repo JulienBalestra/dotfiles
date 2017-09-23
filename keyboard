@@ -1,1 +1,0 @@
-echo -e "\n# Custom keymap\nsetxkbmap -option "lv3:caps_switch\n" >> ~/.bashrc
