@@ -9,8 +9,8 @@ test ${SUDO_USER}
 apt-cache show google-chrome-stable || {
 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
 }
-grep -c "http://dl.google.com/linux/chrome/deb/" /etc/apt/sources.list.d/google.list || {
-	echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
+grep -c "http://dl.google.com/linux/chrome/deb/" /etc/apt/sources.list.d/google-chrome.list || {
+	echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
 }
 ## Chrome
 
@@ -76,3 +76,15 @@ git config --global user.name "JulienBalestra"
 ls -l /home/${SUDO_USER}/ght
 ## Git
 
+## Docker
+docker --version || {
+	curl -Lf get.docker.com | sh
+	usermod -aG docker ${SUDO_USER}
+}
+## Docker
+
+## rkt
+RKTVERSION="1.28.1"
+curl -Lf https://github.com/rkt/rkt/releases/download/v${RKTVERSION}/rkt_${RKTVERSION}-1_amd64.deb -o /tmp/rkt.deb
+dpkg -i /tmp/rkt.deb
+## rkt
