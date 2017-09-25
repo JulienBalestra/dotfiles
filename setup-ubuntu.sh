@@ -78,7 +78,7 @@ ls -l /home/${SUDO_USER}/ght
 
 ## Docker
 docker --version || {
-	curl -Lf get.docker.com | sh
+	curl -Lf https://get.docker.com | sh
 	usermod -aG docker ${SUDO_USER}
 }
 ## Docker
